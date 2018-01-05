@@ -14,11 +14,6 @@ public class Snake extends ExoticAnimal {
         return this.breed;
     }
 
-    @Override
-    public void setDegreeOfPollution(Integer degreeOfPollution) {
-
-    }
-
     public Snake() {
         this.breed = SnakeBreed.Outbreed.toString();
         this.name = "Snake";
