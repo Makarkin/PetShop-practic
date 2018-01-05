@@ -84,7 +84,7 @@ public class HolderClass {
     }
 
     public static CleanJob getCleaning() {
-          if (cleaning == null) {
+        if (cleaning == null) {
             cleaning = new CleanJob();
             return cleaning;
         } else {
