@@ -13,11 +13,6 @@ public class Dog extends RegularAnimal {
         return this.breed;
     }
 
-    @Override
-    public void setDegreeOfPollution(Integer degreeOfPollution) {
-
-    }
-
     public Dog() {
         this.breed = DogBreed.Outbreed.toString();
         this.name = "Dog";
