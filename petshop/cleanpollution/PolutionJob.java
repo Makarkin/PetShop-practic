@@ -1,4 +1,4 @@
-package petshop.cleanPollution;
+package petshop.cleanpollution;
 
 import petshop.animals.Animal;
 import petshop.holder.HolderClass;
