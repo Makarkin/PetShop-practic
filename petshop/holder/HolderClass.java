@@ -21,10 +21,11 @@ public class HolderClass {
     private static PrintClass printing;
     private static CleanJob cleaning;
     private static PolutionJob pollution;
+    private static WorkDataClass workdata;
 
     public static StorageClass getHolderStorage() {
-        if (holderStorage == null) {
-            readValue();
+         if (holderStorage == null) {
+            getWorkdata().readValue();
             return holderStorage;
         } else {
             return holderStorage;
@@ -100,14 +101,12 @@ public class HolderClass {
         }
     }
 
-    public static void readValue() {
-        ObjectMapper mapper = new ObjectMapper();
-        String filepath = "D:\\Storage.txt";
-        try {
-            StorageClass s = mapper.readValue(new FileInputStream(filepath), StorageClass.class);
-            HolderClass.setHolderStorage(s);
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
+ public static WorkDataClass getWorkdata() {
+        if (workdata == null) {
+            workdata = new WorkDataClass();
+            return workdata;
+        } else {
+            return workdata;
         }
-    }
+    }   
 }
