@@ -1,4 +1,4 @@
-package petshop.sellBuyPrint;
+package petshop.sellbuyprint;
 
 import petshop.animals.Animal;
 
