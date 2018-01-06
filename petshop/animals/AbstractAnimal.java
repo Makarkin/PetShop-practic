@@ -1,4 +1,4 @@
-package PetShopPackage.AnimalsPackage;
+package petshop.animals;
 
 public abstract class AbstractAnimal implements Animal {
     protected String breed;
@@ -22,7 +22,8 @@ public abstract class AbstractAnimal implements Animal {
         return this.character;
     }
 
-    public Integer getDegreeOfPollution() {
+    @Override
+    public int getDegreeOfPollution() {
         return this.degreeOfPollution;
     }
 

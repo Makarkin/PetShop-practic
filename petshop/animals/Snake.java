@@ -1,4 +1,4 @@
-package PetShopPackage.AnimalsPackage;
+package petshop.animals;
 
 public class Snake extends ExoticAnimal {
 
@@ -19,7 +19,7 @@ public class Snake extends ExoticAnimal {
         this.name = "Snake";
         this.character = "Naughty";
         this.cost = 5000;
-        this.ex_markup = 50;
+        this.exMarkup = 50;
     }
 
     public Snake(String name, String character, SnakeBreed breed, int cost) {
@@ -27,6 +27,6 @@ public class Snake extends ExoticAnimal {
         this.name = name;
         this.character = character;
         this.cost = cost;
-        this.ex_markup = 50;
+        this.exMarkup = 50;
     }
 }

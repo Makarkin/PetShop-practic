@@ -1,4 +1,4 @@
-package PetShopPackage.AnimalsPackage;
+package petshop.animals;
 
 public class Cat extends RegularAnimal {
 
@@ -19,7 +19,7 @@ public class Cat extends RegularAnimal {
         this.name = "Cat";
         this.character = "Naughty";
         this.cost = 1000;
-        this.reg_markup = 10;
+        this.regMarkup = 10;
     }
 
     public Cat(String name, String character, CatBreed breed, int cost) {
@@ -27,6 +27,6 @@ public class Cat extends RegularAnimal {
         this.name = name;
         this.character = character;
         this.cost = cost;
-        this.reg_markup = 10;
+        this.regMarkup = 10;
     }
 }

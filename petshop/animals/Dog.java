@@ -1,4 +1,4 @@
-package PetShopPackage.AnimalsPackage;
+package petshop.animals;
 
 public class Dog extends RegularAnimal {
     public enum DogBreed {
@@ -18,7 +18,7 @@ public class Dog extends RegularAnimal {
         this.name = "Dog";
         this.character = "Naughty";
         this.cost = 1100;
-        this.reg_markup = 5;
+        this.regMarkup = 5;
     }
 
     public Dog(String name, String character, DogBreed breed, int cost) {
@@ -26,6 +26,6 @@ public class Dog extends RegularAnimal {
         this.name = name;
         this.character = character;
         this.cost = cost;
-        this.reg_markup = 10;
+        this.regMarkup = 10;
     }
 }

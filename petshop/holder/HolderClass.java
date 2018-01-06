@@ -1,49 +1,48 @@
-package PetShopPackage.Holder;
+package petshop.holder;
 
-import PetShopPackage.CleanAndPollutionPackage.CleanJob;
-import PetShopPackage.CleanAndPollutionPackage.PolutionJob;
-import PetShopPackage.SearchPackage.SearchClass;
-import PetShopPackage.SellBuyAndPrintPackage.PrintClass;
-import PetShopPackage.SellBuyAndPrintPackage.SellBuyClass;
-import PetShopPackage.SimulationPackage.SimulationProcess;
-import PetShopPackage.StorageAndSaveDataPackage.SaveDataClass;
-import PetShopPackage.StorageAndSaveDataPackage.StorageClass;
+import petshop.cleanPollution.CleanJob;
+import petshop.cleanPollution.PolutionJob;
+import petshop.search.SearchClass;
+import petshop.sellBuyPrint.PrintClass;
+import petshop.sellBuyPrint.SellBuyClass;
+import petshop.simulation.SimulationProcess;
+import petshop.storage.SaveDataClass;
+import petshop.storage.StorageClass;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 
 public class HolderClass {
-    private static StorageClass holder_storage;
-    private static SellBuyClass sell_buy;
+    private static StorageClass holderStorage;
+    private static SellBuyClass sellBuy;
     private static SearchClass searching;
     private static SimulationProcess simulation;
-    private static SaveDataClass data_saving;
+    private static SaveDataClass dataSaving;
     private static PrintClass printing;
     private static CleanJob cleaning;
     private static PolutionJob pollution;
 
-    public static StorageClass getHolder_storage() {
-        if (holder_storage == null) {
-            holder_storage = new StorageClass();
-            return holder_storage;
+    public static StorageClass getHolderStorage() {
+        if (holderStorage == null) {
+            readValue();
+            return holderStorage;
         } else {
-            return holder_storage;
+            return holderStorage;
         }
     }
 
-    public static void setHolder_storage(StorageClass input_holder_storage) {
-        if (holder_storage == null) {
-            holder_storage = input_holder_storage;
+    public static void setHolderStorage(StorageClass holderStorage) {
+        if (HolderClass.holderStorage == null) {
+            HolderClass.holderStorage = holderStorage;
         }
     }
 
-    public static SellBuyClass getSell_buy() {
-        if (sell_buy == null) {
-            sell_buy = new SellBuyClass();
-            return sell_buy;
+    public static SellBuyClass getSellBuy() {
+        if (sellBuy == null) {
+            sellBuy = new SellBuyClass();
+            return sellBuy;
         } else {
-            return sell_buy;
+            return sellBuy;
         }
     }
 
@@ -65,12 +64,12 @@ public class HolderClass {
         }
     }
 
-    public static SaveDataClass getData_saving() {
-        if (data_saving == null) {
-            data_saving = new SaveDataClass();
-            return data_saving;
+    public static SaveDataClass getDataSaving() {
+        if (dataSaving == null) {
+            dataSaving = new SaveDataClass();
+            return dataSaving;
         } else {
-            return data_saving;
+            return dataSaving;
         }
     }
 
@@ -106,7 +105,7 @@ public class HolderClass {
         String filepath = "D:\\Storage.txt";
         try {
             StorageClass s = mapper.readValue(new FileInputStream(filepath), StorageClass.class);
-            HolderClass.setHolder_storage(s);
+            HolderClass.setHolderStorage(s);
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
